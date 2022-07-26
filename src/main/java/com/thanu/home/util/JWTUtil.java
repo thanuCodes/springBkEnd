@@ -13,7 +13,7 @@ import java.util.function.Function;
 @Service
 public class JWTUtil {
 
-    private String secret = ""; // to be edited
+    private String secret = "myKey";
 
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
