@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import javax.annotation.PostConstruct;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -14,7 +15,7 @@ import java.util.stream.Stream;
 public class AppInitializer {
     @Autowired
     private UserRepository repository;
-
+ @PostConstruct
     public void initUser(){
         List<User> users = Stream.of(
                 new User(100,"thanura","pass1","sample@exmple1.com"),
