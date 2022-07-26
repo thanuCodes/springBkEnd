@@ -24,7 +24,7 @@ public class WelcomeControl {
         return "Welcome to the application";
     }
     @PostMapping("/auth")
-    public String generateToken(@RequestBody Auth auth){
+    public String generateToken(@RequestBody Auth auth) throws Exception{
         try {
 
             authenticationManager.authenticate(
@@ -34,7 +34,9 @@ public class WelcomeControl {
 
         }catch (Exception ex){
 
+        throw new Exception("Invalid User Name or Password");
         }
+        return jwtUtil.generateToken(auth.getUserName());
 
     }
 }
