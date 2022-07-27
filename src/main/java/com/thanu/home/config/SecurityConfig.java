@@ -1,6 +1,5 @@
 package com.thanu.home.config;
 
-
 import com.thanu.home.filter.JWTFilter;
 import com.thanu.home.service.CustomDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
