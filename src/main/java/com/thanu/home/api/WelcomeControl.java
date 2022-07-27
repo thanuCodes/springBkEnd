@@ -1,4 +1,4 @@
-package com.thanu.home.controller;
+package com.thanu.home.api;
 
 import com.thanu.home.entity.auth.Auth;
 import com.thanu.home.util.JWTUtil;
