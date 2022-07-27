@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import javax.annotation.PostConstruct;
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -18,10 +19,10 @@ public class AppInitializer {
  @PostConstruct
     public void initUser(){
         List<User> users = Stream.of(
-                new User(100,"thanura","pass1","sample@exmple1.com"),
-                new User(101,"nilni","pass2","sample@exmple2.com"),
-                new User(102,"chandrani","pass3","sample@exmple3.com"),
-                new User(103,"gamini","pass4","sample@exmple4.com")
+                new User(UUID.randomUUID().toString(),"thanura","pass1","sample@exmple1.com"),
+                new User(UUID.randomUUID().toString(),"nilni","pass2","sample@exmple2.com"),
+                new User(UUID.randomUUID().toString(),"chandrani","pass3","sample@exmple3.com"),
+                new User(UUID.randomUUID().toString(),"gamini","pass4","sample@exmple4.com")
 
         ).collect(Collectors.toList());
         repository.saveAll(users);

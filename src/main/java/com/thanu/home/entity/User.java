@@ -16,7 +16,7 @@ import java.io.Serializable;
 @Table(name = "USER_TABLE")
 public class User implements Serializable {
     @Id
-    private int id;
+    private String id;
     private String userName;
     private String password;
     private String email;

@@ -13,7 +13,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: mysql
-    url: jdbc:mysql://localhost:3306/security_config?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/User_with_security_config?createDatabaseIfNotExist=true
 
 
   jpa:
